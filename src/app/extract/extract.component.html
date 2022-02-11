@@ -1,0 +1,17 @@
+<table class="table">
+  <thead class="table__header">
+    <th class="table__header__content">Data</th>
+    <th class="table__header__content">Valor</th>
+    <th class="table__header__content">Destino</th>
+  </thead>
+  <tbody *ngIf="transferences?.length > 0; else emptyList">
+    <tr class="table__line" *ngFor="let t of transferences">
+      <td class="table__content">{{t?.date | date: "short"}}</td>
+      <td class="table__content">{{t?.value | currency}}</td>
+      <td class="table__content">{{t?.destiny}}</td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #emptyList>
+  <p>Nenhuma operação cadastrada</p>
+</ng-template>

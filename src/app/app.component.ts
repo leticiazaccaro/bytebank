@@ -1,3 +1,4 @@
+import { TransferService } from './services/transfer.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hytebank';
+  title = 'bytebank';
+
+  constructor(private service: TransferService) {}
 }
